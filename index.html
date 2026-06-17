@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Angel's Glow | Radiant Skincare Rituals</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "background": "#F6F8F3",
+                    "on-secondary-container": "#2F4F34",
+                    "tertiary": "#D4B16A",
+                    "on-primary-fixed-variant": "#2F4F34",
+                    "inverse-surface": "#2F4F34",
+                    "primary-container": "#4E6B4A",
+                    "on-primary": "#FFFFFF",
+                    "on-secondary-fixed": "#2F4F34",
+                    "primary-fixed-dim": "#4E6B4A",
+                    "on-tertiary": "#FFFFFF",
+                    "on-primary-container": "#FFFFFF",
+                    "tertiary-fixed": "#D4B16A",
+                    "outline-variant": "#c4c8bf",
+                    "secondary-fixed-dim": "#2F4F34",
+                    "on-surface-variant": "#4E6B4A",
+                    "error": "#ba1a1a",
+                    "surface-container-lowest": "#FFFFFF",
+                    "surface-variant": "#F6F8F3",
+                    "tertiary-fixed-dim": "#D4B16A",
+                    "surface-dim": "#dcd9d9",
+                    "surface-container": "#F6F8F3",
+                    "inverse-on-surface": "#f3f0f0",
+                    "surface-tint": "#4E6B4A",
+                    "on-primary-fixed": "#2F4F34",
+                    "surface": "#FFFFFF",
+                    "on-background": "#2F4F34",
+                    "tertiary-container": "#D4B16A",
+                    "primary-fixed": "#4E6B4A",
+                    "surface-container-low": "#F6F8F3",
+                    "on-error-container": "#93000a",
+                    "on-surface": "#2F4F34",
+                    "inverse-primary": "#4E6B4A",
+                    "surface-container-highest": "#e4e2e1",
+                    "error-container": "#ffdad6",
+                    "surface-bright": "#FFFFFF",
+                    "secondary": "#2F4F34",
+                    "surface-container-high": "#eae7e7",
+                    "secondary-container": "#F6F8F3",
+                    "on-tertiary-fixed": "#2F4F34",
+                    "on-secondary": "#FFFFFF",
+                    "on-tertiary-container": "#2F4F34",
+                    "outline": "#4E6B4A",
+                    "on-error": "#FFFFFF",
+                    "on-secondary-fixed-variant": "#2F4F34",
+                    "secondary-fixed": "#F6F8F3",
+                    "on-tertiary-fixed-variant": "#2F4F34",
+                    "primary": "#4E6B4A",
+                    "accent-gold": "#D4B16A"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "sm": "12px",
+                    "lg": "48px",
+                    "xl": "80px",
+                    "xs": "4px",
+                    "md": "24px",
+                    "margin-mobile": "16px",
+                    "base": "8px",
+                    "margin-desktop": "64px",
+                    "gutter": "24px",
+                    "section-gap": "100px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "headline-sm": ["Playfair Display"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "display-lg-mobile": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"],
+                    "label-caps": ["Inter"],
+                    "display-lg": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .soft-ambient-shadow {
+            box-shadow: 0 10px 30px -5px rgba(78, 107, 74, 0.12);
+        }
+        .product-card {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .product-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px -12px rgba(78, 107, 74, 0.25);
+        }
+        .product-card:hover img {
+            transform: scale(1.1);
+        }
+        .shimmer-bg {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(135deg, rgba(255,255,255,0) 0%, rgba(212, 177, 106, 0.05) 50%, rgba(255,255,255,0) 100%);
+            background-size: 200% 200%;
+            animation: shimmer 8s infinite linear;
+            pointer-events: none;
+            z-index: 0;
+        }
+        @keyframes shimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+        .fade-in-up {
+            animation: fadeInUp 1.2s ease-out forwards;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0; top: 0; width: 100%; height: 100%;
+            background-color: rgba(47, 79, 52, 0.8);
+            backdrop-filter: blur(4px);
+        }
+        .modal-content {
+            background-color: #FFFFFF;
+            margin: 10% auto;
+            padding: 40px;
+            width: 90%;
+            max-width: 500px;
+            border-radius: 1rem;
+        }
+    /* Modal Transitions */ 
+    .modal-overlay { transition: opacity 0.3s ease-out; } 
+    .modal-content-container { transition: transform 0.3s ease-out, opacity 0.3s ease-out; } 
+    .modal-hidden { opacity: 0; pointer-events: none; } 
+    .modal-hidden .modal-content-container { transform: scale(0.95); } 
+    .no-scrollbar::-webkit-scrollbar { display: none; } 
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+</style>
+</head>
+<body class="bg-background font-body-md text-on-surface selection:bg-primary/20">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-primary/10">
+<div class="flex justify-between items-center px-margin-desktop py-5 w-full max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-medium text-primary tracking-tight italic">
+            Angel's Glow
+        </div>
+<div class="hidden md:flex gap-10 items-center">
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-primary border-b-2 border-primary pb-1" href="index.html">Home</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface/70 hover:text-primary transition-colors" href="products.html">Products</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface/70 hover:text-primary transition-colors" href="about.html">About</a>
+<a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface/70 hover:text-primary transition-colors" href="contact.html">Contact</a>
+</div>
+<div class="flex gap-6 items-center">
+<button class="hover:text-primary transition-colors"><span class="material-symbols-outlined">search</span></button>
+<button class="hover:text-primary transition-colors"><span class="material-symbols-outlined">shopping_bag</span></button>
+<button class="hover:text-primary transition-colors"><span class="material-symbols-outlined">person</span></button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-white fade-in-up" style="opacity: 1;">
+<div class="absolute inset-0 z-0 opacity-20">
+<div class="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[100px] -mr-48 -mt-48"></div>
+<div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-accent-gold/10 rounded-full blur-[100px] -ml-24 -mb-24"></div>
+</div>
+<div class="relative z-10 w-full max-w-container-max mx-auto px-margin-desktop flex flex-col md:flex-row items-center gap-16">
+<div class="w-full md:w-1/2 flex flex-col items-start gap-8">
+<div class="inline-flex items-center gap-4 fade-in-up" style="animation-delay: 0.1s">
+<div class="w-12 h-px bg-accent-gold"></div>
+<span class="font-label-caps text-label-caps uppercase tracking-[0.3em] text-accent-gold">Luxury Botanical Skincare</span>
+</div>
+<h1 class="fade-in-up" style="animation-delay: 0.3s">
+<span class="block font-display-lg text-display-lg text-primary uppercase tracking-tighter leading-none mb-2">ANGEL'S GLOW</span>
+<span class="block font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface italic font-light">Nature's Own Luminescence</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface/80 max-w-md fade-in-up" style="animation-delay: 0.5s">
+                Experience clinical efficacy harmonized with pure botanical extracts for a complexion that reflects the clarity of the soul.
+            </p>
+<div class="flex flex-wrap gap-5 pt-4 fade-in-up" style="animation-delay: 0.7s">
+<a href="products.html"
+   class="bg-primary text-on-primary px-10 py-5 font-label-caps text-label-caps uppercase tracking-[0.2em] hover:bg-secondary transition-all shadow-lg hover:shadow-primary/20 inline-block">
+    Explore Rituals
+</a>
+<a href="#collection"
+   class="border-2 border-primary text-primary px-10 py-5 font-label-caps text-label-caps uppercase tracking-[0.2em] hover:bg-primary/5 transition-all inline-block">
+    Discover More
+</a>
+</div>
+</div>
+<div class="w-full md:w-1/2 flex justify-center fade-in-up" style="animation-delay: 0.4s">
+<div class="relative w-72 md:w-96 h-72 md:h-96 rounded-full overflow-hidden soft-ambient-shadow border-[12px] border-background">
+<img alt="Angel's Glow Signature Product" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIgXhSKYck3emO6Y18B5rrsQSA_-t-kqT-S2Szs7FpaxDKm0dwH8J3tuat3jbMCrJaZ6Irp6-YvcfDwP_O4LG-RKD7Cg_11qqbudMDef8kiMRswyN2bddqHKwsvpNhmfg9-VofBEDSfcWHcVh8QpIAPlCgElTPwZc4bk8xmjtgLX5TpEuN2hE13WRVZnoVayZIK5pQTYn9D1kbwG8PfyjL1XSfteluT67NctHxbKFn-ndEl4L1zogZNcWgB24Ac2glvzY-dvSmixU"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Section -->
+<section class="bg-surface-container-low border-y border-primary/5 py-16 fade-in-up" style="opacity: 1;">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col items-center mb-12 text-center">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Why Customers Trust Angel's Glow</h3>
+<div class="w-16 h-0.5 bg-accent-gold mx-auto"></div>
+</div>
+<div class="flex flex-wrap justify-center items-center gap-12 md:gap-20">
+<div class="flex flex-col items-center gap-3 group">
+<div class="w-14 h-14 rounded-full bg-white flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all shadow-sm">
+<span class="material-symbols-outlined text-3xl">eco</span>
+</div>
+<span class="font-label-caps text-label-caps tracking-widest uppercase text-on-surface/60">Cruelty-Free</span>
+</div>
+<div class="flex flex-col items-center gap-3 group">
+<div class="w-14 h-14 rounded-full bg-white flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all shadow-sm">
+<span class="material-symbols-outlined text-3xl">verified_user</span>
+</div>
+<span class="font-label-caps text-label-caps tracking-widest uppercase text-on-surface/60">Dermatologically Tested</span>
+</div>
+<div class="flex flex-col items-center gap-3 group">
+<div class="w-14 h-14 rounded-full bg-white flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all shadow-sm">
+<span class="material-symbols-outlined text-3xl">spa</span>
+</div>
+<span class="font-label-caps text-label-caps tracking-widest uppercase text-on-surface/60">Pure Extracts</span>
+</div>
+<div class="flex flex-col items-center gap-3 group">
+<div class="w-14 h-14 rounded-full bg-white flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all shadow-sm">
+<span class="material-symbols-outlined text-3xl">public</span>
+</div>
+<span class="font-label-caps text-label-caps tracking-widest uppercase text-on-surface/60">Locally Sourced</span>
+</div>
+<div class="flex flex-col items-center gap-3 group">
+<div class="w-14 h-14 rounded-full bg-white flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all shadow-sm">
+<span class="material-symbols-outlined text-3xl">face</span>
+</div>
+<span class="font-label-caps text-label-caps tracking-widest uppercase text-on-surface/60">All Skin Types</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Products -->
+<section id="collection" class="py-section-gap bg-white fade-in-up" style="opacity: 1;">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col items-center mb-20 text-center">
+<span class="font-label-caps text-label-caps text-accent-gold uppercase tracking-[0.3em] mb-4">The Collection</span>
+<h2 class="font-headline-md text-headline-md text-primary mb-6">Botanical Masterpieces</h2>
+<div class="w-20 h-px bg-accent-gold"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Product Card 1: Serum -->
+<div class="product-card group bg-background rounded-2xl p-4">
+<div class="shimmer-bg"></div>
+<div class="aspect-[4/5] overflow-hidden rounded-xl relative z-10 mb-6">
+<img alt="Glutathione Face Serum" class="w-full h-full object-cover transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXSjKaANz_HtNfYV2ImPEM_Qv8r3bVmHM0ikf2i_4dvBbWyr4_Nwkzv2HuRv3R6aDFWGXGmUIOTy9QOLJ2tLGLKpi8qZqf2OumYN2AIjbnYulJ0fiWDU45C2kQGUbUGx5wavnbikNmUMr3lS02Oly1PG8SlTAcUqiF-i4V0FAl-A1vaI0Kjp_amiP4RtdmVv0YoDfkAvl2mVHMdcs6dz5iKOqP8Y2vRG8WpO3KpxvNuM4I38LakQceC68-RHICew9bT_7NijjTl-U"/>
+</div>
+<div class="px-2 relative z-10">
+<span class="font-label-caps text-[10px] text-accent-gold uppercase tracking-widest mb-2 block">Brightening</span>
+<h3 class="font-headline-sm text-[22px] text-primary mb-1">Glutathione Face Serum</h3>
+<p class="text-on-surface/60 font-body-md text-sm mb-4">Natural Glow Activator</p>
+<div class="flex justify-between items-center mt-auto">
+<span class="font-headline-sm text-primary">₹1,499</span>
+<button class="bg-primary text-on-primary p-3 rounded-full hover:bg-secondary transition-colors">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2: Face Wash -->
+<div class="product-card group bg-background rounded-2xl p-4">
+<div class="shimmer-bg"></div>
+<div class="aspect-[4/5] overflow-hidden rounded-xl relative z-10 mb-6">
+<img alt="Glutathione Face Wash" class="w-full h-full object-cover transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKSoHctTPHFZN9J52D2SdniYFLA_MJVKWlvJX82drZZMRI8Qqow5SqWpX6II_c55XAT6JrR_In8MA2UuNoO9d74bb1BxZHgGJsKI79Xe-zN6B-vzqXnNaLkAEhSaqHl3wgvGP89fk6_IVGNptW-aWB3zxaqFaQZxwKaOcFLVop6aMKq2Mjduw1wh1fzLkerApKuBcP3YdEFacm9equbNGFvZ97I5cDNQuqaDHDmp8JHu_M5C4G3TRWsQIh3UHOFsdxJqCIHE0nS3g"/>
+</div>
+<div class="px-2 relative z-10">
+<span class="font-label-caps text-[10px] text-accent-gold uppercase tracking-widest mb-2 block">Cleansing</span>
+<h3 class="font-headline-sm text-[22px] text-primary mb-1">Glutathione Face Wash</h3>
+<p class="text-on-surface/60 font-body-md text-sm mb-4">Purifying Botanical Cleanse</p>
+<div class="flex justify-between items-center mt-auto">
+<span class="font-headline-sm text-primary">₹799</span>
+<button class="bg-primary text-on-primary p-3 rounded-full hover:bg-secondary transition-colors">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3: Body Ubtan -->
+<div class="product-card group bg-background rounded-2xl p-4">
+<div class="shimmer-bg"></div>
+<div class="aspect-[4/5] overflow-hidden rounded-xl relative z-10 mb-6">
+<img alt="Body Ubtan" class="w-full h-full object-cover transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9T9BlDmjyWn2eXMguy0o-Ue90epkQREvw8_B-jfIIdN1yIFSTLWI-CT-kRMG_sAYQM9hNlwOjdps5TkNX_TV4l9VUztIMqACfGLXiyp50OE0LujeasBX1y0QEPv3N4zZ-59zaDA38hOeeG2YOhW15kEiL_GEPdvbK7dzuUlPTzHel6C0lv-n-dk1PJI_r-MK8hzQWXgrLppdXOEZygMUPdqdpHZDjRq5HcQUVJCHsTAHDAgO5rnIaehXFZbwW4H_ILOgNXtAL3l8"/>
+</div>
+<div class="px-2 relative z-10">
+<span class="font-label-caps text-[10px] text-accent-gold uppercase tracking-widest mb-2 block">Revitalizing</span>
+<h3 class="font-headline-sm text-[22px] text-primary mb-1">Body Ubtan</h3>
+<p class="text-on-surface/60 font-body-md text-sm mb-4">Traditional herbal treatment with Sandalwood, Saffron, and Turmeric to exfoliate and brighten.</p>
+<div class="flex justify-between items-center mt-auto">
+<span class="font-headline-sm text-primary">₹1,250</span>
+<button class="bg-primary text-on-primary p-3 rounded-full hover:bg-secondary transition-colors">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Ratings Dashboard -->
+<section class="py-section-gap bg-primary text-white overflow-hidden relative fade-in-up" style="opacity: 1;">
+<div class="absolute inset-0 z-0 opacity-10 flex items-center justify-center">
+<span class="material-symbols-outlined text-[400px]" style="font-variation-settings: 'FILL' 1;">grade</span>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 text-center">
+<div class="flex flex-col items-center">
+<span class="font-display-lg text-[64px] font-bold leading-none mb-4">4.8/5</span>
+<div class="flex gap-1 mb-4">
+<span class="material-symbols-outlined text-accent-gold" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-accent-gold" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-accent-gold" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-accent-gold" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-accent-gold" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<span class="font-label-caps text-label-caps uppercase tracking-widest opacity-80">Global Rating</span>
+</div>
+<div class="flex flex-col items-center justify-center">
+<span class="font-display-lg text-[64px] font-bold leading-none mb-4">96%</span>
+<span class="font-label-caps text-label-caps uppercase tracking-widest opacity-80">Customer Satisfaction</span>
+</div>
+<div class="flex flex-col items-center justify-center">
+<span class="font-display-lg text-[64px] font-bold leading-none mb-4">12k+</span>
+<span class="font-label-caps text-label-caps uppercase tracking-widest opacity-80">Verified Rituals</span>
+</div>
+<div class="flex flex-col items-center justify-center">
+<span class="font-display-lg text-[64px] font-bold leading-none mb-4">92%</span>
+<span class="font-label-caps text-label-caps uppercase tracking-widest opacity-80">Would Recommend</span>
+</div>
+</div>
+<div class="mt-20 flex justify-center">
+<button class="bg-white text-primary px-12 py-5 font-label-caps text-label-caps uppercase tracking-[0.2em] hover:bg-background transition-all shadow-xl rounded-full" onclick="document.getElementById('ratingsModal').style.display='block'">
+                View Ratings Details
+            </button>
+</div>
+</div>
+</section>
+<!-- Ratings Modal -->
+<div class="modal" id="ratingsModal">
+<div class="modal-content relative">
+<button class="absolute top-4 right-4 text-primary" onclick="document.getElementById('ratingsModal').style.display='none'">
+<span class="material-symbols-outlined">close</span>
+</button>
+<h3 class="font-headline-md text-primary mb-6">Customer Ratings</h3>
+<div class="space-y-4 mb-8">
+<div class="flex items-center gap-4">
+<span class="w-12 font-label-caps">5 Star</span>
+<div class="flex-1 h-2 bg-background rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 85%"></div>
+</div>
+<span class="w-8 text-sm opacity-60">85%</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="w-12 font-label-caps">4 Star</span>
+<div class="flex-1 h-2 bg-background rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 11%"></div>
+</div>
+<span class="w-8 text-sm opacity-60">11%</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="w-12 font-label-caps">3 Star</span>
+<div class="flex-1 h-2 bg-background rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 3%"></div>
+</div>
+<span class="w-8 text-sm opacity-60">3%</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="w-12 font-label-caps">2 Star</span>
+<div class="flex-1 h-2 bg-background rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 0.5%"></div>
+</div>
+<span class="w-8 text-sm opacity-60">0.5%</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="w-12 font-label-caps">1 Star</span>
+<div class="flex-1 h-2 bg-background rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 0.5%"></div>
+</div>
+<span class="w-8 text-sm opacity-60">0.5%</span>
+</div>
+</div>
+<div class="p-4 bg-background rounded-lg text-center">
+<p class="text-primary font-bold">96% Total Satisfaction Rate</p>
+<p class="text-sm text-on-surface/60">Based on 12,482 verified customer reviews</p>
+</div>
+</div>
+</div>
+<!-- Routine Section -->
+<section class="py-section-gap bg-background fade-in-up" style="opacity: 1;">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row gap-16 items-center">
+<div class="w-full md:w-1/2">
+<div class="relative aspect-square rounded-3xl overflow-hidden soft-ambient-shadow">
+<img alt="Luxury botanical skincare ritual setting" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-KLkCtffKml_0VY8la8ODg4oZRxhem2k4F8NDogAKa9Sj3WHjznaMEXajv1_plYupFWiNZOtJUEHuafL4fkQGEucLdoIK4LeRON0DO4l2mA51n7QQRUTgMzsjTEU1ylHXojD1NoRIeQrkwVl9nnzZ8H6tDQd2N-FSVVlV499-LJzwG3AUfdqvMqh2qQc0rdkT3Jqz_HUpUT8veCiPslrdifnaeoYMtmWetTkpSJNCXa1Iquic5kXSEnCcdLnRnnT2R7GZkqmHLDo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+</div>
+</div>
+<div class="w-full md:w-1/2 flex flex-col gap-10">
+<div class="flex flex-col gap-4">
+<h2 class="font-headline-md text-headline-md text-primary">The Botanical Ritual</h2>
+<div class="w-16 h-px bg-accent-gold"></div>
+<p class="font-body-md text-body-md text-on-surface/70">Four steps to unveil your most radiant, natural self. Rooted in tradition, refined by science.</p>
+</div>
+<div class="grid gap-8">
+<div class="flex gap-6 group">
+<div class="flex-shrink-0 w-12 h-12 rounded-full border border-primary flex items-center justify-center font-headline-sm text-primary group-hover:bg-primary group-hover:text-white transition-all">01</div>
+<div>
+<h4 class="font-headline-sm text-[20px] text-primary mb-1">Purify</h4>
+<p class="text-on-surface/60 font-body-md">Cleanse with our gentle botanical face wash to restore elemental balance.</p>
+</div>
+</div>
+<div class="flex gap-6 group">
+<div class="flex-shrink-0 w-12 h-12 rounded-full border border-primary flex items-center justify-center font-headline-sm text-primary group-hover:bg-primary group-hover:text-white transition-all">02</div>
+<div>
+<h4 class="font-headline-sm text-[20px] text-primary mb-1">Nourish</h4>
+<p class="text-on-surface/60 font-body-md">Infuse the skin with concentrated Glutathione for deep cellular luminosity.</p>
+</div>
+</div>
+<div class="flex gap-6 group">
+<div class="flex-shrink-0 w-12 h-12 rounded-full border border-primary flex items-center justify-center font-headline-sm text-primary group-hover:bg-primary group-hover:text-white transition-all">03</div>
+<div>
+<h4 class="font-headline-sm text-[20px] text-primary mb-1">Lock</h4>
+<p class="text-on-surface/60 font-body-md">Seal in moisture with the weightless Face Gel for a dewy finish.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-secondary text-white w-full py-20 border-t border-white/5">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16 mb-16 text-center md:text-left">
+<div class="flex flex-col gap-6">
+<div class="font-headline-md text-headline-md italic tracking-tight">Angel's Glow</div>
+<p class="text-white/60 font-body-md max-w-xs mx-auto md:mx-0">Empowering your natural beauty through the wisdom of nature and the precision of science.</p>
+<div class="flex justify-center md:justify-start gap-5">
+<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-primary transition-all" href="https://instagram.com/angelsglow.in">
+<span class="material-symbols-outlined text-sm">photo_camera</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-primary transition-all" href="https://wa.me/917715924287">
+<span class="material-symbols-outlined text-sm">chat</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-primary transition-all" href="mailto:angelsglow00@gmail.com?subject=Angel's%20Glow%20Inquiry">
+<span class="material-symbols-outlined text-sm">mail</span>
+</a>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<h4 class="font-label-caps text-label-caps uppercase tracking-widest text-accent-gold">Quick Links</h4>
+<div class="flex flex-col gap-3 font-body-md text-sm text-white/70">
+<a class="hover:text-white transition-colors cursor-pointer" onclick="togglePrivacyModal(true)">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-white transition-colors" href="#">Shipping &amp; Returns</a>
+<a class="hover:text-white transition-colors" href="#">Our Lab</a>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<h4 class="font-label-caps text-label-caps uppercase tracking-widest text-accent-gold">Contact Us</h4>
+<div class="flex flex-col gap-3 font-body-md text-sm text-white/70">
+<p class="">New Delhi, India</p>
+<p class="">angelsglow00@gmail.com</p>
+<p class="">+91 77159 24287</p>
+</div>
+</div>
+</div>
+<div class="pt-10 border-t border-white/10 text-center text-white/40 font-label-caps text-[10px] tracking-widest flex flex-col gap-2">
+<p class="">© 2026 Angel's Glow. All rights reserved.</p>
+<p class="">Director: Angel Singh</p>
+</div>
+</div>
+</footer>
+<!-- Privacy Policy Modal (Consolidated with functionality from SCREEN_3) -->
+<div class="fixed inset-0 z-[100] modal-overlay modal-hidden flex items-center justify-center p-4 bg-on-background/40 backdrop-blur-sm" id="privacyModal">
+<div class="absolute inset-0" onclick="togglePrivacyModal(false)"></div>
+<div class="relative w-full max-w-2xl max-h-[85vh] bg-[#FDFCF9] rounded-2xl shadow-2xl overflow-hidden modal-content-container flex flex-col">
+<!-- Modal Header -->
+<div class="flex justify-between items-center p-6 border-b border-primary-container/20">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container text-2xl">verified_user</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Privacy Policy</h2>
+</div>
+<button class="p-2 hover:bg-primary-container/10 rounded-full transition-colors text-primary" onclick="togglePrivacyModal(false)">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<!-- Modal Body -->
+<div class="overflow-y-auto p-8 font-body-md text-on-surface-variant space-y-8 no-scrollbar">
+<p class="text-sm italic opacity-70">Last Updated: June 2026</p>
+<section class="space-y-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#A8BBA2]">spa</span>
+<h3 class="font-semibold text-primary uppercase tracking-wider">Our Commitment</h3>
+</div>
+<p class="">At Angel's Glow, we value your trust as much as your radiance. Your data is handled with the same clinical precision and natural care as our formulations. This policy outlines how we protect the information you share with our botanical sanctuary.</p>
+</section>
+<section class="space-y-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#A8BBA2]">database</span>
+<h3 class="font-semibold text-primary uppercase tracking-wider">Information We Collect</h3>
+</div>
+<ul class="list-none space-y-2 pl-2">
+<li class="flex gap-3"><span class="text-[#A8BBA2]">✦</span><span class="">Personal identifiers (name, email, shipping address) for order fulfillment.</span></li>
+<li class="flex gap-3"><span class="text-[#A8BBA2]">✦</span><span class="">Skin profile data provided through our ritual consultation tools.</span></li>
+<li class="flex gap-3"><span class="text-[#A8BBA2]">✦</span><span class="">Transaction history to personalize your skincare journey.</span></li>
+</ul>
+</section>
+<section class="space-y-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#A8BBA2]">shield_moon</span>
+<h3 class="font-semibold text-primary uppercase tracking-wider">How We Use Your Data</h3>
+</div>
+<p class="">Your information serves only to enhance your experience. We use it to process orders, provide customized botanical recommendations, and inform you of new ritual launches. We never sell your data to third-party harvesters.</p>
+</section>
+<section class="space-y-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#A8BBA2]">lock</span>
+<h3 class="font-semibold text-primary uppercase tracking-wider">Security Measures</h3>
+</div>
+<p class="">We employ industry-standard encryption to shield your sensitive information. Our digital lab is monitored continuously to ensure a safe environment for your beauty commerce.</p>
+</section>
+</div>
+<!-- Modal Footer -->
+<div class="p-6 border-t border-primary-container/20 bg-primary-container/5 flex justify-end">
+<button class="px-8 py-3 bg-primary text-on-primary font-label-caps text-label-caps rounded-lg hover:opacity-90 transition-opacity" onclick="togglePrivacyModal(false)">
+                I UNDERSTAND
+            </button>
+</div>
+</div>
+</div>
+<script>
+    // Reveal animations on scroll
+    const observerOptions = { threshold: 0.1 };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in-up');
+                entry.target.style.opacity = "1";
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('section').forEach(section => {
+        section.style.opacity = "0";
+        observer.observe(section);
+    });
+
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+        let ratingsModal = document.getElementById('ratingsModal');
+        if (event.target == ratingsModal) {
+            ratingsModal.style.display = "none";
+        }
+    }
+
+    // Privacy Modal Logic (Consolidated with functionality from SCREEN_3)
+    const privacyModal = document.getElementById('privacyModal');
+    
+    function togglePrivacyModal(show) {
+        if (show) {
+            privacyModal.classList.remove('modal-hidden');
+            document.body.style.overflow = 'hidden';
+        } else {
+            privacyModal.classList.add('modal-hidden');
+            document.body.style.overflow = '';
+        }
+    }
+
+    // Escape key to close
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !privacyModal.classList.contains('modal-hidden')) {
+            togglePrivacyModal(false);
+        }
+    });
+</script>
+</body></html>

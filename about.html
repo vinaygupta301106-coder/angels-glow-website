@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Angel's Glow | Our Story</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#fcf9f8",
+                        "on-secondary-container": "#606660",
+                        "tertiary": "#735a31",
+                        "on-primary-fixed-variant": "#3a4b38",
+                        "inverse-surface": "#303030",
+                        "primary-container": "#a8bba2",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#171d18",
+                        "primary-fixed-dim": "#b9ccb2",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-container": "#3b4b38",
+                        "tertiary-fixed": "#ffdeac",
+                        "outline-variant": "#c4c8bf",
+                        "secondary-fixed-dim": "#c2c8c1",
+                        "on-surface-variant": "#444841",
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#e4e2e1",
+                        "tertiary-fixed-dim": "#e3c290",
+                        "surface-dim": "#dcd9d9",
+                        "surface-container": "#f0eded",
+                        "inverse-on-surface": "#f3f0f0",
+                        "surface-tint": "#52634e",
+                        "on-primary-fixed": "#101f0f",
+                        "surface": "#fcf9f8",
+                        "on-background": "#1b1c1c",
+                        "tertiary-container": "#d1b180",
+                        "primary-fixed": "#d5e8cd",
+                        "surface-container-low": "#f6f3f2",
+                        "on-error-container": "#93000a",
+                        "on-surface": "#1b1c1c",
+                        "inverse-primary": "#b9ccb2",
+                        "surface-container-highest": "#e4e2e1",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#fcf9f8",
+                        "secondary": "#5a605a",
+                        "surface-container-high": "#eae7e7",
+                        "secondary-container": "#dee4dc",
+                        "on-tertiary-fixed": "#281900",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-container": "#5a431c",
+                        "outline": "#747871",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed-variant": "#424843",
+                        "secondary-fixed": "#dee4dc",
+                        "on-tertiary-fixed-variant": "#59431c",
+                        "primary": "#52634e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "12px",
+                        "lg": "48px",
+                        "xl": "80px",
+                        "xs": "4px",
+                        "md": "24px",
+                        "margin-mobile": "16px",
+                        "base": "8px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "section-gap": "120px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "headline-sm": ["Playfair Display"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "label-caps": ["Inter"],
+                        "display-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .luxury-gradient {
+            background: linear-gradient(135deg, #fcf9f8 0%, #f6f3f2 100%);
+        }
+        .soft-elevation {
+            box-shadow: 0 10px 40px -10px rgba(82, 99, 78, 0.08);
+        }
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    /* Modal Transitions */ .modal-overlay { transition: opacity 0.3s ease-out; } .modal-content-container { transition: transform 0.3s ease-out, opacity 0.3s ease-out; } .modal-hidden { opacity: 0; pointer-events: none; } .modal-hidden .modal-content-container { transform: scale(0.95); } .no-scrollbar::-webkit-scrollbar { display: none; } .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }</style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<nav class="fixed top-0 w-full z-50 bg-transparent glass-nav border-b border-outline-variant/20">
+<div class="flex justify-between items-center px-margin-desktop py-6 w-full max-w-container-max mx-auto">
+<a class="font-headline-md text-headline-md font-medium text-primary italic tracking-tight" href="index.html">Angel's Glow</a>
+<div class="hidden md:flex items-center gap-10 font-body-md text-body-md tracking-wide">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="index.html">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="products.html">Products</a>
+<a class="text-primary font-semibold border-b-2 border-primary pb-1" href="about.html">About</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Contact</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="hover:opacity-80 transition-opacity duration-300 scale-95 active:scale-90 transition-transform text-primary">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<button class="hover:opacity-80 transition-opacity duration-300 scale-95 active:scale-90 transition-transform text-primary">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-32">
+<!-- Storytelling Hero Section -->
+<section class="relative min-h-[70vh] flex items-center overflow-hidden">
+<div class="relative z-10 w-full max-w-container-max mx-auto px-margin-desktop transition-all duration-1000 opacity-100 translate-y-0">
+<div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+<div class="w-full lg:w-1/2">
+<span class="font-label-caps text-label-caps text-primary tracking-[0.3em] uppercase block mb-6">Our Legacy</span>
+<h1 class="font-display-lg text-display-lg text-on-surface mb-8 leading-tight">Crafting the ritual of <span class="italic font-normal text-primary">serene radiance.</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed mb-8">
+                        Angel's Glow was born from the belief that skincare is more than a routine; it is a sacred moment of pause. We combine modern biotechnology with ancestral wisdom to create products that don't just treat the skin, but celebrate the soul.
+                    </p>
+</div>
+<div class="w-full lg:w-1/2">
+<div class="relative">
+<div class="absolute -inset-4 bg-primary/5 rounded-2xl blur-2xl"></div>
+<img alt="Botanical skincare lifestyle" class="relative w-full aspect-[4/5] object-cover rounded-2xl soft-elevation" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9T9BlDmjyWn2eXMguy0o-Ue90epkQREvw8_B-jfIIdN1yIFSTLWI-CT-kRMG_sAYQM9hNlwOjdps5TkNX_TV4l9VUztIMqACfGLXiyp50OE0LujeasBX1y0QEPv3N4zZ-59zaDA38hOeeG2YOhW15kEiL_GEPdvbK7dzuUlPTzHel6C0lv-n-dk1PJI_r-MK8hzQWXgrLppdXOEZygMUPdqdpHZDjRq5HcQUVJCHsTAHDAgO5rnIaehXFZbwW4H_ILOgNXtAL3l8"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Value Cards Section -->
+<section class="py-section-gap px-margin-desktop bg-surface-container-low">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-1000 opacity-100 translate-y-0">
+<div class="p-10 bg-surface-container-lowest soft-elevation transition-all hover:-translate-y-2 flex flex-col gap-6 rounded-xl">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="auto_awesome">auto_awesome</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Purity First</h3>
+<p class="font-body-md text-on-surface-variant">We source only the most ethically harvested, medical-grade botanicals for uncompromising efficacy.</p>
+</div>
+<div class="p-10 bg-surface-container-lowest soft-elevation transition-all hover:-translate-y-2 flex flex-col gap-6 rounded-xl">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="science">science</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Bio-Harmonious</h3>
+<p class="font-body-md text-on-surface-variant">Formulations designed to work in synergy with your skin’s natural microbiome and pH balance.</p>
+</div>
+<div class="p-10 bg-surface-container-lowest soft-elevation transition-all hover:-translate-y-2 flex flex-col gap-6 rounded-xl">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="eco">eco</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Ethical Luxury</h3>
+<p class="font-body-md text-on-surface-variant">Sustainable glass packaging and fair-trade sourcing practices that respect our planet.</p>
+</div>
+<div class="p-10 bg-surface-container-lowest soft-elevation transition-all hover:-translate-y-2 flex flex-col gap-6 rounded-xl">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="self_care">self_care</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Sensory Ritual</h3>
+<p class="font-body-md text-on-surface-variant">Texture, scent, and application designed to provide a meditative spa experience at home.</p>
+</div>
+<div class="p-10 bg-surface-container-lowest soft-elevation transition-all hover:-translate-y-2 flex flex-col gap-6 rounded-xl">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="verified">verified</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Proven Glow</h3>
+<p class="font-body-md text-on-surface-variant">Dermatologist-tested results that deliver visible improvements in tone, texture, and luminosity.</p>
+</div>
+<div class="p-10 bg-surface-container-lowest soft-elevation transition-all hover:-translate-y-2 flex flex-col gap-6 rounded-xl">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="diversity_1">diversity_1</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Radical Inclusivity</h3>
+<p class="font-body-md text-on-surface-variant">Tailored skincare solutions for every skin type, concern, and identity across the spectrum.</p>
+</div>
+</div>
+</section>
+<!-- Founder Section -->
+<section class="py-section-gap px-margin-desktop overflow-hidden bg-background">
+<div class="max-w-container-max mx-auto transition-all duration-1000 opacity-100 translate-y-0">
+<div class="flex flex-col md:flex-row items-center gap-16 lg:gap-24">
+<div class="w-full md:w-1/2 flex justify-center">
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-all duration-700"></div>
+<img alt="Angel Singh Founder" class="relative w-80 h-80 lg:w-[480px] lg:h-[480px] object-cover rounded-full border-[12px] border-surface-container-lowest soft-elevation" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBu8dqAWk7Cz5dBcve3HsWezs8cRoYIzwDHIFQwIJnLZbJizKokv3QPQQrVgBL7ggtHUWZsrMoV9lm_FitYXDHKhL7uwVenFb6QhcdjA1QqgfatmmSV9q6tkyaZZWBY6g6lf3wJvmP5U8X7HzduJlynMjB-dj8dA53ZnJzr6ZvBacysgoxUeFWDHWDnj7nL4RCGwYcdgPkEcikTsEgZi6RvUaG9WBidQzk6XLN8UP94_nUg5F2jJ5cq66kdAwhkjiJZyW8LMkD9-XQ"/>
+<div class="absolute -bottom-6 -right-6 w-32 h-32 bg-primary-container rounded-full flex items-center justify-center text-on-primary-container p-6 text-center transform rotate-12 soft-elevation">
+<span class="font-label-caps text-[10px] leading-tight font-bold">SINCE 2024</span>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2">
+<div class="w-10 h-1 bg-primary mb-10"></div>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-4">Meet the Visionary</h2>
+<h4 class="font-body-lg text-primary font-semibold mb-8">Angel Singh, <span class="font-normal italic">Founder &amp; Director</span></h4>
+<p class="font-body-md text-on-surface-variant leading-relaxed mb-6 italic">
+                        "After a decade in the wellness industry, I realized that the market was missing something fundamental: soul. Skincare had become too clinical, too loud, and too disconnected from the person using it."
+                    </p>
+<p class="font-body-md text-on-surface-variant leading-relaxed mb-8">
+                        "Angel's Glow is my response to that noise. It's an invitation to slow down, to touch your skin with kindness, and to witness your own radiance bloom from within."
+                    </p>
+<div class="italic font-display-lg text-primary/30 text-4xl lg:text-5xl font-light">Angel Singh</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="py-section-gap px-margin-desktop relative">
+<div class="absolute inset-0 bg-secondary-container/30 -z-10 transition-all duration-1000 opacity-100 translate-y-0"></div>
+<div class="max-w-container-max mx-auto text-center py-20 bg-surface-container-lowest/60 backdrop-blur-sm rounded-xl transition-all duration-1000 opacity-100 translate-y-0">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-6">Begin Your Ritual</h2>
+<p class="font-body-lg text-on-surface-variant max-w-xl mx-auto mb-10">
+                Connect with our skincare specialists for a bespoke consultation or join our mailing list for exclusive ritual guides.
+            </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<a class="bg-primary text-on-primary px-10 py-4 font-label-caps text-label-caps uppercase tracking-widest hover:brightness-110 transition-all active:scale-95 rounded-lg text-center" href="contact.html">Inquire Now</a>
+<a class="border border-primary text-primary px-10 py-4 font-label-caps text-label-caps uppercase tracking-widest hover:bg-primary/5 transition-all active:scale-95 rounded-lg text-center" href="products.html">Shop Collection</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-surface-container-low w-full py-section-gap">
+<div class="flex flex-col items-center gap-8 px-margin-desktop w-full max-w-container-max mx-auto text-center">
+<div class="flex flex-col items-center">
+ <img
+  src="Founder.jpg"
+  alt="Founder Angel Singh"
+  class="w-32 h-32 object-cover rounded-full border-[4px] border-surface-container-lowest shadow-lg"/>
+<div class="font-headline-sm text-headline-sm text-primary italic mt-2 mb-5">Angel's Glow</div>
+</div>
+<div class="flex flex-wrap justify-center gap-8 font-label-caps text-label-caps text-secondary">
+<a class="text-on-surface-variant hover:text-primary transition-all cursor-pointer" href="#" onclick="togglePrivacyModal(true)">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary transition-all" href="#">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-primary transition-all" href="#">Shipping &amp; Returns</a>
+</div>
+<div class="flex gap-6 mt-4">
+<a aria-label="Facebook" class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="public">public</span>
+</a>
+<a aria-label="Email" class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="mailto:angelsglow00@gmail.com?subject=Angel's Glow Inquiry">
+<span class="material-symbols-outlined text-lg" data-icon="mail">mail</span>
+</a>
+<a aria-label="Instagram" class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="favorite">favorite</span>
+</a>
+</div>
+<div class="mt-8 font-label-caps text-label-caps opacity-60">
+            © 2026 Angel Singh. All rights reserved.
+        </div>
+</div>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    });
+</script>
+<div class="fixed inset-0 z-[100] modal-overlay modal-hidden flex items-center justify-center p-4 bg-on-background/40 backdrop-blur-sm" id="privacyModal"><div class="absolute inset-0" onclick="togglePrivacyModal(false)"></div><div class="relative w-full max-w-2xl max-h-[85vh] bg-[#FDFCF9] rounded-2xl shadow-2xl overflow-hidden modal-content-container flex flex-col"><div class="flex justify-between items-center p-6 border-b border-primary-container/20"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary-container text-2xl">verified_user</span><h2 class="font-headline-sm text-headline-sm text-primary">Privacy Policy</h2></div><button class="p-2 hover:bg-primary-container/10 rounded-full transition-colors text-primary" onclick="togglePrivacyModal(false)"><span class="material-symbols-outlined">close</span></button></div><div class="overflow-y-auto p-8 font-body-md text-on-surface-variant space-y-8 no-scrollbar"><p class="text-sm italic opacity-70">Last Updated: June 2026</p><section class="space-y-4"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[#A8BBA2]">spa</span><h3 class="font-semibold text-primary uppercase tracking-wider">Our Commitment</h3></div><p>At Angel's Glow, we value your trust as much as your radiance. Your data is handled with the same clinical precision and natural care as our formulations. This policy outlines how we protect the information you share with our botanical sanctuary.</p></section><section class="space-y-4"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[#A8BBA2]">database</span><h3 class="font-semibold text-primary uppercase tracking-wider">Information We Collect</h3></div><ul class="list-none space-y-2 pl-2"><li class="flex gap-3"><span class="text-[#A8BBA2]">✦</span><span>Personal identifiers (name, email, shipping address) for order fulfillment.</span></li><li class="flex gap-3"><span class="text-[#A8BBA2]">✦</span><span>Skin profile data provided through our ritual consultation tools.</span></li><li class="flex gap-3"><span class="text-[#A8BBA2]">✦</span><span>Transaction history to personalize your skincare journey.</span></li></ul></section><section class="space-y-4"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[#A8BBA2]">shield_moon</span><h3 class="font-semibold text-primary uppercase tracking-wider">How We Use Your Data</h3></div><p>Your information serves only to enhance your experience. We use it to process orders, provide customized botanical recommendations, and inform you of new ritual launches. We never sell your data to third-party harvesters.</p></section><section class="space-y-4"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[#A8BBA2]">lock</span><h3 class="font-semibold text-primary uppercase tracking-wider">Security Measures</h3></div><p>We employ industry-standard encryption to shield your sensitive information. Our digital lab is monitored continuously to ensure a safe environment for your beauty commerce.</p></section></div><div class="p-6 border-t border-primary-container/20 bg-primary-container/5 flex justify-end"><button class="px-8 py-3 bg-primary text-on-primary font-label-caps text-label-caps rounded-lg hover:opacity-90 transition-opacity" onclick="togglePrivacyModal(false)">I UNDERSTAND</button></div></div></div><script>const privacyModal = document.getElementById('privacyModal'); function togglePrivacyModal(show) { if (show) { privacyModal.classList.remove('modal-hidden'); document.body.style.overflow = 'hidden'; } else { privacyModal.classList.add('modal-hidden'); document.body.style.overflow = ''; } } document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !privacyModal.classList.contains('modal-hidden')) { togglePrivacyModal(false); } });</script></body></html>
