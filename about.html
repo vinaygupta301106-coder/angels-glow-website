@@ -120,7 +120,7 @@
 </head>
 <body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
 <nav class="fixed top-0 w-full z-50 bg-transparent glass-nav border-b border-outline-variant/20">
-<div class="flex justify-between items-center px-margin-desktop py-6 w-full max-w-container-max mx-auto">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-6 w-full max-w-container-max mx-auto">
 <a class="font-headline-md text-headline-md font-medium text-primary italic tracking-tight" href="index.html">Angel's Glow</a>
 <div class="hidden md:flex items-center gap-10 font-body-md text-body-md tracking-wide">
 <a class="text-on-surface-variant hover:text-primary transition-colors" href="index.html">Home</a>
@@ -135,9 +135,39 @@
 <button class="hover:opacity-80 transition-opacity duration-300 scale-95 active:scale-90 transition-transform text-primary">
 <span class="material-symbols-outlined" data-icon="person">person</span>
 </button>
+<button
+class="md:hidden hover:opacity-80 transition-opacity duration-300 text-primary"
+onclick="toggleMobileMenu()">
+<span class="material-symbols-outlined">menu</span>
+</button>
 </div>
 </div>
 </nav>
+<!-- Mobile Menu -->
+<div id="mobileMenu"
+class="hidden md:hidden fixed top-24 right-4 w-56 bg-white rounded-xl shadow-xl border border-outline-variant/20 z-50">
+
+<a href="index.html"
+class="block px-6 py-4 hover:bg-primary/5 border-b border-outline-variant/10">
+Home
+</a>
+
+<a href="products.html"
+class="block px-6 py-4 hover:bg-primary/5 border-b border-outline-variant/10">
+Products
+</a>
+
+<a href="about.html"
+class="block px-6 py-4 hover:bg-primary/5 border-b border-outline-variant/10">
+About
+</a>
+
+<a href="contact.html"
+class="block px-6 py-4 hover:bg-primary/5">
+Contact Us
+</a>
+
+</div>
 <main class="pt-32">
 <!-- Storytelling Hero Section -->
 <section class="relative min-h-[70vh] flex items-center overflow-hidden">
@@ -231,8 +261,9 @@
                 Connect with our skincare specialists for a bespoke consultation or join our mailing list for exclusive ritual guides.
             </p>
 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-<a class="bg-primary text-on-primary px-10 py-4 font-label-caps text-label-caps uppercase tracking-widest hover:brightness-110 transition-all active:scale-95 rounded-lg text-center" href="contact.html">Inquire Now</a>
-<a class="border border-primary text-primary px-10 py-4 font-label-caps text-label-caps uppercase tracking-widest hover:bg-primary/5 transition-all active:scale-95 rounded-lg text-center" href="products.html">Shop Collection</a>
+<a class="bg-primary text-on-primary px-6 sm:px-10 py-3 sm:py-4 font-label-caps text-label-caps uppercase tracking-widest hover:brightness-110 transition-all active:scale-95 rounded-lg text-center" href="contact.html">Inquire Now</a>
+
+<a class="border border-primary text-primary px-6 sm:px-10 py-3 sm:py-4 font-label-caps text-label-caps uppercase tracking-widest hover:bg-primary/5 transition-all active:scale-95 rounded-lg text-center" href="products.html">Shop Collection</a>
 </div>
 </div>
 </section>
@@ -262,9 +293,11 @@
 <span class="material-symbols-outlined text-lg" data-icon="favorite">favorite</span>
 </a>
 </div>
-<div class="mt-8 font-label-caps text-label-caps opacity-60">
-            © 2026 Angel Singh. All rights reserved.
-        </div>
+ <div class="text-center px-4">
+  <p class="text-xs sm:text-sm tracking-wider text-on-surface-variant">
+    © 2026 ANGEL'S GLOW. ALL RIGHTS RESERVED.
+  </p>
+ </div>
 </div>
 </footer>
 <script>
@@ -288,4 +321,28 @@
         });
     });
 </script>
-<div class="fixed inset-0 z-[100] modal-overlay modal-hidden flex items-center justify-center p-4 bg-on-background/40 backdrop-blur-sm" id="privacyModal"><div class="absolute inset-0" onclick="togglePrivacyModal(false)"></div><div class="relative w-full max-w-2xl max-h-[85vh] bg-[#FDFCF9] rounded-2xl shadow-2xl overflow-hidden modal-content-container flex flex-col"><div class="flex justify-between items-center p-6 border-b border-primary-container/20"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary-container text-2xl">verified_user</span><h2 class="font-headline-sm text-headline-sm text-primary">Privacy Policy</h2></div><button class="p-2 hover:bg-primary-container/10 rounded-full transition-colors text-primary" onclick="togglePrivacyModal(false)"><span class="material-symbols-outlined">close</span></button></div><div class="overflow-y-auto p-8 font-body-md text-on-surface-variant space-y-8 no-scrollbar"><p class="text-sm italic opacity-70">Last Updated: June 2026</p><section class="space-y-4"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[#A8BBA2]">spa</span><h3 class="font-semibold text-primary uppercase tracking-wider">Our Commitment</h3></div><p>At Angel's Glow, we value your trust as much as your radiance. Your data is handled with the same clinical precision and natural care as our formulations. This policy outlines how we protect the information you share with our botanical sanctuary.</p></section><section class="space-y-4"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[#A8BBA2]">database</span><h3 class="font-semibold text-primary uppercase tracking-wider">Information We Collect</h3></div><ul class="list-none space-y-2 pl-2"><li class="flex gap-3"><span class="text-[#A8BBA2]">✦</span><span>Personal identifiers (name, email, shipping address) for order fulfillment.</span></li><li class="flex gap-3"><span class="text-[#A8BBA2]">✦</span><span>Skin profile data provided through our ritual consultation tools.</span></li><li class="flex gap-3"><span class="text-[#A8BBA2]">✦</span><span>Transaction history to personalize your skincare journey.</span></li></ul></section><section class="space-y-4"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[#A8BBA2]">shield_moon</span><h3 class="font-semibold text-primary uppercase tracking-wider">How We Use Your Data</h3></div><p>Your information serves only to enhance your experience. We use it to process orders, provide customized botanical recommendations, and inform you of new ritual launches. We never sell your data to third-party harvesters.</p></section><section class="space-y-4"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[#A8BBA2]">lock</span><h3 class="font-semibold text-primary uppercase tracking-wider">Security Measures</h3></div><p>We employ industry-standard encryption to shield your sensitive information. Our digital lab is monitored continuously to ensure a safe environment for your beauty commerce.</p></section></div><div class="p-6 border-t border-primary-container/20 bg-primary-container/5 flex justify-end"><button class="px-8 py-3 bg-primary text-on-primary font-label-caps text-label-caps rounded-lg hover:opacity-90 transition-opacity" onclick="togglePrivacyModal(false)">I UNDERSTAND</button></div></div></div><script>const privacyModal = document.getElementById('privacyModal'); function togglePrivacyModal(show) { if (show) { privacyModal.classList.remove('modal-hidden'); document.body.style.overflow = 'hidden'; } else { privacyModal.classList.add('modal-hidden'); document.body.style.overflow = ''; } } document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !privacyModal.classList.contains('modal-hidden')) { togglePrivacyModal(false); } });</script></body></html>
+<div class="fixed inset-0 z-[100] modal-overlay modal-hidden flex items-center justify-center p-4 bg-on-background/40 backdrop-blur-sm" id="privacyModal"><div class="absolute inset-0" onclick="togglePrivacyModal(false)"></div><div class="relative w-full max-w-2xl max-h-[85vh] bg-[#FDFCF9] rounded-2xl shadow-2xl overflow-hidden modal-content-container flex flex-col"><div class="flex justify-between items-center p-6 border-b border-primary-container/20"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary-container text-2xl">verified_user</span><h2 class="font-headline-sm text-headline-sm text-primary">Privacy Policy</h2></div><button class="p-2 hover:bg-primary-container/10 rounded-full transition-colors text-primary" onclick="togglePrivacyModal(false)"><span class="material-symbols-outlined">close</span></button></div><div class="overflow-y-auto p-8 font-body-md text-on-surface-variant space-y-8 no-scrollbar"><p class="text-sm italic opacity-70">Last Updated: June 2026</p><section class="space-y-4"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[#A8BBA2]">spa</span><h3 class="font-semibold text-primary uppercase tracking-wider">Our Commitment</h3></div><p>At Angel's Glow, we value your trust as much as your radiance. Your data is handled with the same clinical precision and natural care as our formulations. This policy outlines how we protect the information you share with our botanical sanctuary.</p></section><section class="space-y-4"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[#A8BBA2]">database</span><h3 class="font-semibold text-primary uppercase tracking-wider">Information We Collect</h3></div><ul class="list-none space-y-2 pl-2"><li class="flex gap-3"><span class="text-[#A8BBA2]">✦</span><span>Personal identifiers (name, email, shipping address) for order fulfillment.</span></li><li class="flex gap-3"><span class="text-[#A8BBA2]">✦</span><span>Skin profile data provided through our ritual consultation tools.</span></li><li class="flex gap-3"><span class="text-[#A8BBA2]">✦</span><span>Transaction history to personalize your skincare journey.</span></li></ul></section><section class="space-y-4"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[#A8BBA2]">shield_moon</span><h3 class="font-semibold text-primary uppercase tracking-wider">How We Use Your Data</h3></div><p>Your information serves only to enhance your experience. We use it to process orders, provide customized botanical recommendations, and inform you of new ritual launches. We never sell your data to third-party harvesters.</p></section><section class="space-y-4"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[#A8BBA2]">lock</span><h3 class="font-semibold text-primary uppercase tracking-wider">Security Measures</h3></div><p>We employ industry-standard encryption to shield your sensitive information. Our digital lab is monitored continuously to ensure a safe environment for your beauty commerce.</p></section></div><div class="p-6 border-t border-primary-container/20 bg-primary-container/5 flex justify-end"><button class="px-8 py-3 bg-primary text-on-primary font-label-caps text-label-caps rounded-lg hover:opacity-90 transition-opacity" onclick="togglePrivacyModal(false)">I UNDERSTAND</button></div></div></div><script>const privacyModal = document.getElementById('privacyModal'); function togglePrivacyModal(show) { if (show) { privacyModal.classList.remove('modal-hidden'); document.body.style.overflow = 'hidden'; } else { privacyModal.classList.add('modal-hidden'); document.body.style.overflow = ''; } } document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !privacyModal.classList.contains('modal-hidden')) { togglePrivacyModal(false); } });</script>
+<script>
+function toggleMobileMenu() {
+const menu = document.getElementById('mobileMenu');
+menu.classList.toggle('hidden');
+}
+
+document.addEventListener('click', function(event) {
+
+const menu = document.getElementById('mobileMenu');
+
+const button = event.target.closest(
+'[onclick="toggleMobileMenu()"]'
+);
+
+if (
+menu &&
+!menu.contains(event.target) &&
+!button
+) {
+menu.classList.add('hidden');
+}
+});
+</script>
+</body></html>
