@@ -175,9 +175,9 @@
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-primary/10">
 <div class="flex justify-between items-center px-margin-desktop py-5 w-full max-w-container-max mx-auto">
-<div class="font-headline-md text-headline-md font-medium text-primary tracking-tight italic">
-            Angel's Glow
-        </div>
+<div class="font-headline-md text-headline-md font-medium text-primary tracking-tight italic whitespace-nowrap">
+    Angel's Glow
+</div>
 <div class="hidden md:flex gap-10 items-center">
 <a class="font-label-caps text-label-caps uppercase tracking-widest text-primary border-b-2 border-primary pb-1" href="index.html">Home</a>
 <a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface/70 hover:text-primary transition-colors" href="products.html">Products</a>
@@ -185,12 +185,43 @@
 <a class="font-label-caps text-label-caps uppercase tracking-widest text-on-surface/70 hover:text-primary transition-colors" href="contact.html">Contact</a>
 </div>
 <div class="flex gap-6 items-center">
-<button class="hover:text-primary transition-colors"><span class="material-symbols-outlined">search</span></button>
-<button class="hover:text-primary transition-colors"><span class="material-symbols-outlined">shopping_bag</span></button>
-<button class="hover:text-primary transition-colors"><span class="material-symbols-outlined">person</span></button>
+<button class="hover:text-primary transition-colors"><span class="material-symbols-outlined">person</span>
+</button>
+<!-- Mobile Hamburger -->
+    <button
+        class="md:hidden hover:text-primary transition-colors"
+        onclick="toggleMobileMenu()"
+    >
+        <span class="material-symbols-outlined">menu</span>
+    </button>
 </div>
 </div>
 </nav>
+<!-- Mobile Menu -->
+<div id="mobileMenu"
+     class="hidden md:hidden fixed top-[80px] right-4 w-56 bg-white rounded-xl shadow-xl border border-primary/10 z-50">
+
+    <a href="index.html"
+       class="block px-6 py-4 text-primary border-b border-primary/10 hover:bg-primary/5">
+       Home
+    </a>
+
+    <a href="products.html"
+       class="block px-6 py-4 text-on-surface hover:bg-primary/5">
+       Products
+    </a>
+
+    <a href="about.html"
+       class="block px-6 py-4 text-on-surface hover:bg-primary/5">
+       About
+    </a>
+
+    <a href="contact.html"
+       class="block px-6 py-4 text-on-surface hover:bg-primary/5">
+       Contact Us
+    </a>
+
+</div>
 <!-- Hero Section -->
 <section class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-white fade-in-up" style="opacity: 1;">
 <div class="absolute inset-0 z-0 opacity-20">
@@ -611,5 +642,41 @@
             togglePrivacyModal(false);
         }
     });
+</script>
+<script>
+function toggleMobileMenu() {
+    const menu = document.getElementById('mobileMenu');
+
+    if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+    } else {
+        menu.classList.add('hidden');
+    }
+}
+</script>
+<script>
+document.addEventListener('click', function(event) {
+
+    const menu = document.getElementById('mobileMenu');
+
+    const menuButton = event.target.closest('[onclick="toggleMobileMenu()"]');
+
+    if (!menu.contains(event.target) && !menuButton) {
+        menu.classList.add('hidden');
+    }
+
+});
+</script><script>
+document.addEventListener('click', function(event) {
+
+    const menu = document.getElementById('mobileMenu');
+
+    const menuButton = event.target.closest('[onclick="toggleMobileMenu()"]');
+
+    if (!menu.contains(event.target) && !menuButton) {
+        menu.classList.add('hidden');
+    }
+
+});
 </script>
 </body></html>
