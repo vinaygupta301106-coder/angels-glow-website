@@ -137,9 +137,39 @@
 <button class="text-primary hover:opacity-80 transition-opacity p-2 scale-95 active:scale-90">
 <span class="material-symbols-outlined" data-icon="person">person</span>
 </button>
+<button
+class="md:hidden text-primary hover:opacity-80 transition-opacity p-2"
+onclick="toggleMobileMenu()">
+<span class="material-symbols-outlined">menu</span>
+</button>
 </div>
 </div>
 </nav>
+<!-- Mobile Menu -->
+<div id="mobileMenu"
+class="hidden md:hidden fixed top-24 right-4 w-56 bg-white rounded-xl shadow-xl border border-outline-variant/20 z-50">
+
+<a href="index.html"
+class="block px-6 py-4 hover:bg-primary/5 border-b border-outline-variant/10">
+Home
+</a>
+
+<a href="products.html"
+class="block px-6 py-4 hover:bg-primary/5 border-b border-outline-variant/10">
+Products
+</a>
+
+<a href="about.html"
+class="block px-6 py-4 hover:bg-primary/5 border-b border-outline-variant/10">
+About
+</a>
+
+<a href="contact.html"
+class="block px-6 py-4 hover:bg-primary/5">
+Contact Us
+</a>
+
+</div>
 <main class="pt-32 pb-section-gap">
 <!-- Hero Header -->
 <header class="text-center mb-16 px-margin-mobile">
@@ -249,9 +279,11 @@
 <span class="material-symbols-outlined" data-icon="mail">mail</span>
 </a>
 </div>
-<p class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">
-                © 2026 Angel's Glow. All rights reserved.
-            </p>
+<div class="text-center px-4">
+  <p class="text-xs sm:text-sm tracking-wider text-on-surface-variant">
+    © 2026 ANGEL'S GLOW. ALL RIGHTS RESERVED.
+  </p>
+</div>
 </div>
 </footer>
 <!-- Privacy Policy Modal -->
@@ -369,4 +401,27 @@
             }
         });
     </script>
+<script>
+function toggleMobileMenu() {
+const menu = document.getElementById('mobileMenu');
+menu.classList.toggle('hidden');
+}
+
+document.addEventListener('click', function(event) {
+
+const menu = document.getElementById('mobileMenu');
+
+const button = event.target.closest(
+'[onclick="toggleMobileMenu()"]'
+);
+
+if (
+menu &&
+!menu.contains(event.target) &&
+!button
+) {
+menu.classList.add('hidden');
+}
+});
+</script>
 </body></html>
