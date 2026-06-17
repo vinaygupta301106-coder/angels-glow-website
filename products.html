@@ -159,9 +159,39 @@
 <button class="hover:opacity-80 transition-opacity duration-300 scale-95 active:scale-90 transition-transform">
 <span class="material-symbols-outlined text-primary">person</span>
 </button>
+<button
+class="md:hidden hover:opacity-80 transition-opacity duration-300"
+onclick="toggleMobileMenu()">
+<span class="material-symbols-outlined text-primary">menu</span>
+</button>
 </div>
 </nav>
 </header>
+<!-- Mobile Menu -->
+<div id="mobileMenu"
+class="hidden md:hidden fixed top-24 right-4 w-56 bg-white rounded-xl shadow-xl border border-outline-variant/20 z-50">
+
+<a href="index.html"
+class="block px-6 py-4 hover:bg-primary/5 border-b border-outline-variant/10">
+Home
+</a>
+
+<a href="products.html"
+class="block px-6 py-4 hover:bg-primary/5 border-b border-outline-variant/10">
+Products
+</a>
+
+<a href="about.html"
+class="block px-6 py-4 hover:bg-primary/5 border-b border-outline-variant/10">
+About
+</a>
+
+<a href="contact.html"
+class="block px-6 py-4 hover:bg-primary/5">
+Contact Us
+</a>
+
+</div>
 <main class="relative pt-32">
 <!-- Hero Title Section -->
 <section class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center mb-16 md:mb-24">
@@ -434,5 +464,28 @@ src="https://lh3.googleusercontent.com/aida-public/AB6AXuAntZAx_ygH8dFjaZ9gslt1R
             togglePrivacyModal(false);
         }
     });
+</script>
+<script>
+function toggleMobileMenu() {
+const menu = document.getElementById('mobileMenu');
+menu.classList.toggle('hidden');
+}
+
+document.addEventListener('click', function(event) {
+
+const menu = document.getElementById('mobileMenu');
+
+const button = event.target.closest(
+'[onclick="toggleMobileMenu()"]'
+);
+
+if (
+menu &&
+!menu.contains(event.target) &&
+!button
+) {
+menu.classList.add('hidden');
+}
+});
 </script>
 </body></html>
